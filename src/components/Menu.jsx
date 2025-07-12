@@ -5,7 +5,7 @@ import equipe from '../assets/equipe.png';
 import artigos from '../assets/artigos.png';
 import jogo from '../assets/jogo.png';
 
-function MenuLayout({ children }) {
+export function MenuLayout({ children }) {
   return (
     <div className="flex min-h-screen">
       {/* Menu Lateral */}
@@ -21,9 +21,9 @@ function MenuLayout({ children }) {
 
         {/* Itens de Menu */}
         <div className="space-y-6 mt-4">
-          <MenuItem icon={passo} text="Passo a passo" />
+          <MenuItem icon={passo} text="Passo a passo" active />
           <MenuItem icon={produtos} text="Produtos" />
-          <MenuItem icon={equipe} text="Equipe" active />
+          <MenuItem icon={equipe} text="Equipe" />
           <MenuItem icon={artigos} text="Artigos" />
           <MenuItem icon={jogo} text="Jogo" />
         </div>
@@ -62,4 +62,3 @@ function MenuItem({ icon, text, active = false }) {
   );
 }
 
-export default MenuLayout;
